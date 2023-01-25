@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit News</title>
+    <style>
+      textarea#text_submit_news {
+        width: 1170px;
+        margin: 0px auto;
+        padding: 10px 0 116px 0;
+        border: 2px solid;
+    }
+    input#news_title {
+      margin: 0;
+      padding: 20px 40px 20px 40px;
+  }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#newssubmit").click(function(){
+          alert("News Submited . Wait for Admin for approval.");
+        });
+      });
+    </script>
+</head
+<body>
+    <form method="POST" >
+        {% csrf_token %}
+
+        <center><h1> ADD NEWS </h1>
+
+       <div class="form-group">
+            <h3><label>Title </label></h3><br>
+            <input type="text" class="form-control" id="news_title"name ="title" 
+            required placeholder="Add Title ">
+          </div>
+
+
+          <div class="form-group">
+            <h3><label>Add News </label></h3><br>
+            <textarea type="text" class="form-control" id="text_submit_news" name="para"  placeholder="Enter Text"></textarea>
+          </div>
+          <button type="submit" id="newssubmit">News Submit</button>
+</body>
+</html>

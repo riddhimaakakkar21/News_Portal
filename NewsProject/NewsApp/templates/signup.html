@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+  body{ 
+         border-top-width: 8px;
+         border-right-width: 8px;
+         border-bottom-width: 8px;
+         border-left-width: 8px;
+         border-top-style: solid;
+         border-right-style: solid;
+         border-bottom-style: solid;
+         border-left-style: groove;
+         border-top-color: black;
+         border-right-color: black;
+         border-bottom-color: black;
+         border-left-color: black;
+
+
+         border-radius: 10px;
+         border-spacing: 10px;
+         padding: 20px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+       
+ h1   { color: dark blue;}
+ h6   { color: black;}
+ h4   { color: red;}
+ h3   { border-color: black; }
+ button {
+  border-color: green;
+}
+
+     
+    
+ </style>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+
+        <center><h1> SIGN-UP FORM </h1>
+          <h6> Please fill the credentials</h6>
+
+       <div class="form-group">
+            <h3><label for="exampleInputEmail1">Name: </label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name ="name" 
+            required placeholder="Enter name ">
+          </div></h3><br>
+
+
+          <div class="form-group">
+            <h3><label for="exampleInputEmail1">Email : </label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name ="email" placeholder="Enter email">
+          </div></h3><br>
+
+         
+      
+          <div class="form-group">
+            <h3> <label for="exampleInputText1">Password:</label>
+                <input type="password" class="form-control" id="exampleInputText1" name ="password" required placeholder="Password">
+              </div></h3><br>
+
+
+        <h2><button type="submit" class="btn btn-primary">Submit</button></h2></center>
+ 
+
+        
+        </form>            
+</body>
+</html>
